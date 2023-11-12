@@ -130,8 +130,14 @@ namespace QueryRetrieve_SCU
       await client.SendAsync();
       Log("After SendAsync.");
 
+      if (moveSuccessfully.Value)
       {
         Log("images sent successfully");
+        // images sent successfully from QR Server to the store scp
+      }
+      else
+      {
+        Log("images were NOT sent successfully");
         // images sent successfully from QR Server to the store scp
       }
       Log("Stop.");
